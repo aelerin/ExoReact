@@ -1,25 +1,23 @@
-import logo from './logo.svg';
+import React, { Component, Fragment, useState } from "react"
+import { VilleCard } from "./components/VilleCard"
+import { Search } from "./components/search"
 import './App.css';
 
-function App() {
+
+const App = (props) => {
+  const [villeachercher, setVilleachercher] = useState("")
+
+  const handleSubmitVille = (ville) => {
+    setVilleachercher(ville)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Fragment>
+      <h1>On veut passer du bon temps ? Mais où ça ?!</h1>
+      <Search handleSubmit={handleSubmitVille} />
+      <VilleCard ville={villeachercher} />
+    </Fragment>
+  )
 }
 
 export default App;
