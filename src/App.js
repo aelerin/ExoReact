@@ -13,9 +13,9 @@ const App = (props) => {
 
   return (
     <Fragment>
-      <h1>On veut passer du bon temps ? Mais où ça ?!</h1>
+      <h1 className="mainTitle">On veut passer du bon temps ? Mais où ça ?!</h1>
       <Search handleSubmit={handleSubmitVille} />
-      <VilleCard ville={villeachercher} />
+      {villeachercher && <VilleCard ville={villeachercher} />}
     </Fragment>
   )
 }

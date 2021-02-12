@@ -10,10 +10,13 @@ export const Search = (props) => {
         setVille(event.target.value)
     }
 
+
     return (
         <Fragment>
-            <input name="ville" onChange={(event) => handleChangeVille(event)} defaultValue={""}></input>
-            <button onClick={() => { props.handleSubmit(ville); console.log(ville) }}>Search</button>
+            <div className="mainSearch">
+                <input name="ville" onChange={(event) => handleChangeVille(event)} defaultValue={""}></input>
+                <button className="searchBar" onClick={() => { props.handleSubmit(ville); console.log(ville) }}>Search</button>
+            </div>
         </Fragment >
     )
 }

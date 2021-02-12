@@ -1,5 +1,5 @@
 const url = 'http://api.openweathermap.org/data/2.5/weather'
-const apiKey = 'b117dbbddb55f22eee4e95855b8c2a3d'
+const apiKey = '74869edb61cfd3ebf52ff37f8f2e43eb'
 let HTTpHeaders = new Headers()
 let init = {
     method: 'GET',
